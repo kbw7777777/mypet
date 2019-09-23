@@ -13,7 +13,7 @@ public class SampleController {
     @ResponseBody
     public String sampleHome() {
         
-        return "Hello Gradle! Hello Spring Boot!";
+        return "Hello Gradle! Hello Spring Boot!!";
         
     }
 }
