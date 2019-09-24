@@ -1,4 +1,4 @@
-package com.example.demo;
+package com.example.demo.controller;
 
 import org.springframework.boot.autoconfigure.EnableAutoConfiguration;
 import org.springframework.stereotype.Controller;
@@ -13,8 +13,12 @@ public class SampleController {
     @ResponseBody
     public String sampleHome() {
         
-        return "Hello Gradle! Hello Spring Boot!!";
+    
+        return "Hello Gradle! Hello Spring Boot!! And VS Code!!";
         
     }
 }
+
+
+
 
