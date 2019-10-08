@@ -30,6 +30,8 @@ public class MyPetApplication {
 	/////// commit test222/.//
 	//222//
 
+	
+
 	// @Bean
 	// public CommandLineRunner runner(BoardRepository boardRepository) {
 	// 	return (args) -> {
