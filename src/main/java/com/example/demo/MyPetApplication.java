@@ -27,7 +27,8 @@ public class MyPetApplication {
 
 	//TODO 게시글 등록하는 api 
 	//TODO 스웨거 붙여보기
-	//
+	/////// commit test///
+
 	// @Bean
 	// public CommandLineRunner runner(BoardRepository boardRepository) {
 	// 	return (args) -> {
