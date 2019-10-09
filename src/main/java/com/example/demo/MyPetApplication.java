@@ -13,9 +13,10 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 import org.springframework.boot.autoconfigure.domain.EntityScan;
 import org.springframework.context.annotation.Bean;
+import org.springframework.data.jpa.repository.config.EnableJpaAuditing;
 import org.springframework.data.jpa.repository.config.EnableJpaRepositories;
 
-
+@EnableJpaAuditing 
 @SpringBootApplication
 @EntityScan(basePackages = {"com.example.demo"})
 @EnableJpaRepositories(basePackages = {"com.example.demo"})
@@ -25,26 +26,21 @@ public class MyPetApplication {
 		SpringApplication.run(MyPetApplication.class, args);
 	}
 
-	//TODO 게시글 등록하는 api 
-	//TODO 스웨거 붙여보기
-	/////// commit test222/.//
-	//222//
 
-	
+	//TODO 스웨거 http://localhost:8080/swagger-ui.html#/
+	//TODO 엔티티 테이블에 index 거는법 키 다양하게 거는법 찾기
 
 	// @Bean
 	// public CommandLineRunner runner(BoardRepository boardRepository) {
 	// 	return (args) -> {
 			
 
-	// 		IntStream.rangeClosed(1, 200).forEach(index ->
+	// 		IntStream.rangeClosed(1, 120).forEach(index ->
 	// 			boardRepository.save(Board.builder()
 	// 					.title("게시글"+index)
 	// 					.subTitle("순서"+index)
 	// 					.content("컨텐츠")
 	// 					.boardType(BoardType.free)
-	// 					.createdDate(LocalDateTime.now())
-	// 					.updatedDate(LocalDateTime.now())
 	// 					.build())
 	// 		);
 	// 	};

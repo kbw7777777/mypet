@@ -16,8 +16,6 @@ public class BoardAdapter {
                 .subTitle(request.getSubTitle())
                 .content(request.getContent())
                 .boardType(request.getBoardType())
-                .createdDate(request.getCreatedDate())
-                .updatedDate(request.getUpdatedDate())
                 .build();
     }
 

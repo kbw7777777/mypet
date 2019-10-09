@@ -35,12 +35,37 @@ public class BoardController {
         return responses;
     }
 
+    @GetMapping("/{id}")
+    public @ResponseBody BoardResponse get(@PathVariable(value="id") Long id) {
+        List<String> errors = new ArrayList<>();
+        Board board = null;
+        try {
+            board = boardService.get(id);
+        } catch (final Exception e) {
+            errors.add(e.getMessage());
+        }
+        return BoardAdapter.toBoardResponse(board, errors);
+    }
   
     @GetMapping("/list")
     public Page<Board> list(@PageableDefault Pageable pageable) {
         
         return  boardService.findBoardList(pageable);
         
+    }
+
+    @PostMapping("/")
+    public @ResponseBody BoardResponse create(@RequestBody final BoardRequest request) {
+        List<String> errors = new ArrayList<>();
+        Board board = BoardAdapter.toBoard(request);
+        System.out.println(request.getTitle());
+        try {
+            board = boardService.create(board);
+        } catch (final Exception e) {
+            errors.add(e.getMessage());
+            e.printStackTrace();
+        }
+        return BoardAdapter.toBoardResponse(request, errors);
     }
 
 

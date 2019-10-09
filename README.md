@@ -18,3 +18,7 @@ vscode 에 플루터 세팅하는법
 2일차
 스프링부트 rest api 만들기
 - https://imasoftwareengineer.tistory.com/37?category=772561
+
+3일차
+스웨거 연동
+게시판 등록 , 조회 

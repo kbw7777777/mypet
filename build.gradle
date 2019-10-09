@@ -1,3 +1,12 @@
+buildscript {
+    
+    dependencies {
+        
+        //추가
+        classpath "io.spring.gradle:dependency-management-plugin:1.0.4.RELEASE" 
+    }
+}
+
 plugins {
 	id 'org.springframework.boot' version '2.1.8.RELEASE'
 	id 'io.spring.dependency-management' version '1.0.8.RELEASE'
@@ -19,4 +28,15 @@ dependencies {
 	testImplementation 'org.springframework.boot:spring-boot-starter-test'
 	compile group: 'mysql', name: 'mysql-connector-java', version: '8.0.13' 
 	compile('javax.xml.bind:jaxb-api:2.3.0')	
+	
+	// 스웨거
+	compile group: 'io.springfox', name: 'springfox-swagger2', version: '2.9.2'
+	compile group: 'io.springfox', name: 'springfox-swagger-ui', version: '2.9.2'
+
+
+
+	
 }
+
+//Spring Boot Overriding
+ext['hibernate.version'] = '5.2.11.Final' //추가
