@@ -29,6 +29,9 @@ public class MyPetApplication {
 
 	//TODO 스웨거 http://localhost:8080/swagger-ui.html#/
 	//TODO 엔티티 테이블에 index 거는법 키 다양하게 거는법 찾기
+	//TODO 게시판에 좋아요 기능 구현
+	//TODO 댓글 기능 구현, 댓글 좋아요 기능 구현
+	//TODO 대댓글 기능 구현 (대댓글까지만!)
 
 	// @Bean
 	// public CommandLineRunner runner(BoardRepository boardRepository) {
